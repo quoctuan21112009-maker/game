@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #12121d;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  .font-headline {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-hud {
+    font-family: 'Geist', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Hide Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Screen Shake Effect */
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-3px, 2px) rotate(-0.5deg); }
+  40% { transform: translate(3px, -2px) rotate(0.5deg); }
+  60% { transform: translate(-2px, -2px) rotate(0.3deg); }
+  80% { transform: translate(2px, 1px) rotate(-0.3deg); }
+}
+
+.shake-active {
+  animation: screenShake 0.28s ease-in-out;
+}
+
+/* Bullet-time Time Ripple */
+@keyframes timeRipple {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+.ripple-fx {
+  animation: timeRipple 0.8s ease-out forwards;
+}
+
+/* Ultimate Ready Shimmer */
+@keyframes shimmerAnim {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.ultimate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  animation: shimmerAnim 2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Crystalline Hologram Grid */
+.hologram-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(76, 215, 246, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(76, 215, 246, 0.08) 1px, transparent 1px);
+}

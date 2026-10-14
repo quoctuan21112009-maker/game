@@ -1,0 +1,6 @@
+{
+  "name": "Aether Rift: Cybernetic Action RPG",
+  "description": "Epic 3D Mobile Action RPG with real-time Three.js combat, tactical physics gestures, deep gear progression, skill matrix, and global leaderboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
